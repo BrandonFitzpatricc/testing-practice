@@ -1,5 +1,6 @@
 const capitalize = (string) => {
-  return string.charAt(0).toUpperCase() + string.substr(1);
+  const firstChar = string.charAt(0);
+  return firstChar.match(/[a-z]/i) ? string.charAt(0).toUpperCase() + string.substr(1) : `${firstChar} cannot be capitalized`;
 };
 
 export { capitalize };
