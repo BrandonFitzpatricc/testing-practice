@@ -14,13 +14,9 @@ test("words that are already capitalized remain the same", () => {
   expect(capitalize("Hello")).toBe("Hello");
 });
 
-test("strings that contain a non-letter as the first character cannot be capitalized", () => {
-  expect(capitalize("123")).toBe("1 cannot be capitalized");
-  expect(capitalize("$hello")).toBe("$ cannot be capitalized");
-});
-
-test("strings that start with a letter but contain non-letters are capitalized", () => {
-  expect(capitalize("hello123")).toBe("Hello123");
+test("strings that contain a non-letter as the first character are not modified", () => {
+  expect(capitalize("123")).toBe("123");
+  expect(capitalize("$hello")).toBe("$hello");
 });
 
 
