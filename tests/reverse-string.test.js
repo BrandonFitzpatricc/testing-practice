@@ -1,27 +1,14 @@
 import { reverseString } from "../scripts/reverse-string";
 
-test("reverse string", () => {
-  const tests = [
-    {
-      value: "Hello",
-      expected: "olleH",
-    },
-    {
-      value: "World",
-      expected: "dlroW",
-    },
-    {
-      value: "123",
-      expected: "321",
-    },
-    {
-      value: "Hello World",
-      expected: "dlroW olleH",
-    },
-  ];
+test("Words are reversed", () => {
+  expect(reverseString("Hello")).toBe("olleH");
+  expect(reverseString("World")).toBe("dlroW");
+});
 
-  tests.forEach((test) => {
-    const actual = reverseString(test.value);
-    expect(actual).toBe(test.expected);
-  });
+test("Non-letter strings are reversed", () => {
+  expect(reverseString("123")).toBe("321");
+});
+
+test("Multi-word strings are reversed", () => {
+  expect(reverseString("Hello World")).toBe("dlroW olleH");
 });
