@@ -18,5 +18,3 @@ test("strings that contain a non-letter as the first character are not modified"
   expect(capitalize("123")).toBe("123");
   expect(capitalize("$hello")).toBe("$hello");
 });
-
-
